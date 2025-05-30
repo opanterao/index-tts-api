@@ -52,28 +52,28 @@ This project implements a high-performance Text-to-Speech (TTS) API service base
         │       ├── config.yaml
         │       ├── gpt.pth
         │       └── ... (other model files)
-        ├── API.py
+        ├── TTS_API.py
         └── ...other files...
         ```
-    * **Important**: Ensure the `MODEL_DIR` constant in your `API.py` file points to the specific model folder name under `checkpoints/`, for example, `checkpoints/index-tts-1.5`.
+    * **Important**: Ensure the `MODEL_DIR` constant in your `TTS_API.py` file points to the specific model folder name under `checkpoints/`, for example, `checkpoints/index-tts-1.5`.
 
 5.  **Prepare Reference Audio**:
     * Create a folder named `voices` in the project root directory.
     * Place your reference sound file `audio.wav` into the `voices` folder. The API service will load the reference audio from this path.
         ```
         [Project Root]/
-        ├── API.py
+        ├── TTS_API.py
         ├── voices/
         │   └── audio.wav  <--- Ensure this file exists
         └── ...other files...
         ```
 
 6.  **Start the API Service**:
-    * Ensure your API script is correctly named (if your filename is `TTS_API.py.py`, please correct it to `API.py` or use the correct name in the command). Assuming the filename is `API.py`:
+    * Ensure your API script is correctly named (if your filename is `TTS_API.py.py`, please correct it to `TTS_API.py` or use the correct name in the command). Assuming the filename is `TTS_API.py`:
     ```bash
-    python API.py
+    python TTS_API.py
     ```
-    The service starts on `http://0.0.0.0:5000` by default. You can modify the host and port in the `app.run()` call at the bottom of the `API.py` file.
+    The service starts on `http://0.0.0.0:5000` by default. You can modify the host and port in the `app.run()` call at the bottom of the `TTS_API.py` file.
 
 ## 📡 API Usage
 
@@ -82,7 +82,7 @@ Once the service is running, you can send POST requests to the following endpoin
 * **Endpoint**: `http://<your_server_ip_or_localhost>:5000/v1/audio/speech`
 * **Method**: `POST`
 * **Headers**:
-    * `Authorization: Bearer <your_API_KEY>` (The `API_KEY` configured in `API.py`)
+    * `Authorization: Bearer <your_API_KEY>` (The `API_KEY` configured in `TTS_API.py`)
     * `Content-Type: application/json`
 * **Body (JSON)**:
     ```json
