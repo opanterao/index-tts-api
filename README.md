@@ -19,7 +19,7 @@ This project implements a high-performance Text-to-Speech (TTS) API service base
 
 1.  **Clone this project**:
     ```bash
-    [https://github.com/opanterao/index-tts-api.git](https://github.com/opanterao/index-tts-api.git)
+    git clone https://github.com/opanterao/index-tts-api.git
     cd index-tts-api
     ```
 
