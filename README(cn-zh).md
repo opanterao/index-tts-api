@@ -112,11 +112,11 @@ index-tts to OpenAI API server
 
     ```bash
 
-    python TTS_TTS_API.py.py
+    python tts_api.py.py
 
     ```
 
-    服务默认启动在 `http://0.0.0.0:5000`。你可以在 `TTS_TTS_API.py.py` 文件底部的 `app.run()` 中修改主机和端口。
+    服务默认启动在 `http://0.0.0.0:5000`。你可以在 `tts_api.py.py` 文件底部的 `app.run()` 中修改主机和端口。
 
 
 
@@ -134,7 +134,7 @@ index-tts to OpenAI API server
 
 * **Headers**:
 
-    * `Authorization: Bearer <你的API_KEY>` (在 `TTS_TTS_API.py` 中配置的 `API_KEY`)
+    * `Authorization: Bearer <你的API_KEY>` (在 `tts_api.py` 中配置的 `API_KEY`)
 
     * `Content-Type: application/json`
 
