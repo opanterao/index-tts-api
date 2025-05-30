@@ -121,23 +121,13 @@ index-tts to OpenAI API server
 
 * **Body (JSON)**:
 
-    ```json
-
-    {
-
-        "model": "tts-1", // 或 "tts-1-hd"
-
-        "input": "你好，世界！这是 IndexTTS 提供的快速推理语音合成服务。",
-
-        "voice": "alloy", // alloy, echo, fable, onyx, nova, shimmer (均使用 audio.wav 音色)
-
-        "response_format": "wav" // API目前主要输出WAV格式，其他格式请求仅作记录
-
-    }
-
-    ```
-
-
+        ```json
+      "model": "tts-1", // 或 "tts-1-hd'
+      "input": "你好，世界！这是 IndexTTS 提供的快速推理语音合成服务。",
+      "voice": "alloy", // alloy, echo, fable, onyx, nova, shimmer (均使用 audio.wav 音色)
+      "response_format": "wav" // API目前主要输出WAV格式，其他格式请求仅作记录
+      ```
+  
 
 ### 请求示例 (`curl`)
 
