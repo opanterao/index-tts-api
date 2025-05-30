@@ -97,7 +97,7 @@ index-tts to OpenAI API server
     python TTS_API.py
 
 
-    服务默认启动在 `http://0.0.0.0:5000`。你可以在 `tts_api.py.py` 文件底部的 `app.run()` 中修改主机和端口。
+    服务默认启动在 `http://0.0.0.0:5000`。你可以在 `tts_api.py` 文件底部的 `app.run()` 中修改主机和端口。
 
 
 
