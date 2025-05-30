@@ -38,37 +38,28 @@ index-tts to OpenAI API server
 
 1.  **克隆本项目**：
 
-    ```bash
-    
-    https://github.com/opanterao/index-tts-api.git
-
-    cd index-tts-api
-    
-    ```
-
-
+    ```bash
+    git clone https://github.com/opanterao/index-tts-api.git
+    cd index-tts-api
+    ```
 
 2.  **创建并激活虚拟环境** (推荐)：
 
-    ```bash
-
-    conda create -n index-tts-api python=3.10
-
-    conda activate index-tts-api
-
-    ```
-
-
+    ```bash
+    # Using Conda
+    conda create -n index-tts-api python=3.10
+    conda activate index-tts-api
+    # Or using venv
+    # python -m venv venv
+    # source venv/bin/activate  # Linux/macOS
+    # venv\Scripts\activate    # Windows
+    ```
 
 3.  **安装依赖**：
 
-    ```bash
-
-    pip install -r requirements.txt
-
-    ```
-
-
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 4.  **模型准备**：
 
@@ -92,29 +83,19 @@ index-tts to OpenAI API server
 
     * 将你的 参考声音文件 `audio.wav` 文件放入 `voices` 文件夹中。API 服务会从此路径加载参考音频。
 
-        ```
-
-        [项目根目录]/
-
-        ├── TTS_API.py
-
-        ├── voices/
-
-        │   └── audio.wav  <--- 确保此文件存在
-
-        └── ...其他文件...
-
-        ```
-
-
+        ```
+        [Project Root]/
+        ├── TTS_API.py
+        ├── voices/
+        │   └── audio.wav  <--- Ensure this file exists
+        └── ...other files...
+        ```
 
 7.  **启动 API 服务**：
 
-    ```bash
-
-    python tts_api.py.py
-
-    ```
+    ```bash
+    python TTS_API.py
+    ```
 
     服务默认启动在 `http://0.0.0.0:5000`。你可以在 `tts_api.py.py` 文件底部的 `app.run()` 中修改主机和端口。
 
