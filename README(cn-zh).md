@@ -39,9 +39,11 @@ index-tts to OpenAI API server
 1.  **克隆本项目**：
 
     ```bash
+    
     https://github.com/opanterao/index-tts-api.git
 
     cd index-tts-api
+    
     ```
 
 
