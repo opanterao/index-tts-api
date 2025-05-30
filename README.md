@@ -109,3 +109,10 @@ curl -X POST http://localhost:5000/v1/audio/speech \
     "voice": "nova"
 }' \
 --output speech_output.wav # Audio will be streamed and saved to this file
+
+@article{deng2025indextts,
+  title={IndexTTS: An Industrial-Level Controllable and Efficient Zero-Shot Text-To-Speech System},
+  author={Wei Deng, Siyi Zhou, Jingchen Shu, Jinchao Wang, Lu Wang},
+  journal={arXiv preprint arXiv:2502.05512},
+  year={2025}
+}
