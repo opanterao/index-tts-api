@@ -45,10 +45,11 @@ index-tts to OpenAI API server
 2.  **创建并激活虚拟环境** (推荐)：
 
 
-    # Using Conda
+# Using Conda
     conda create -n index-tts-api python=3.10
     conda activate index-tts-api
-    # Or using venv
+    
+# Or using venv
     # python -m venv venv
     # source venv/bin/activate  # Linux/macOS
     # venv\Scripts\activate    # Windows
