@@ -152,3 +152,10 @@ index-tts to OpenAI API server
     }' \
 
 --output speech_output.wav # 音频将流式保存到此文件
+
+@article{deng2025indextts,
+  title={IndexTTS: An Industrial-Level Controllable and Efficient Zero-Shot Text-To-Speech System},
+  author={Wei Deng, Siyi Zhou, Jingchen Shu, Jinchao Wang, Lu Wang},
+  journal={arXiv preprint arXiv:2502.05512},
+  year={2025}
+}
