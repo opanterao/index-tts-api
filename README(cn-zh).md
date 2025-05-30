@@ -38,14 +38,13 @@ index-tts to OpenAI API server
 
 1.  **克隆本项目**：
 
-    ```bash
     git clone https://github.com/opanterao/index-tts-api.git
     cd index-tts-api
-    ```
+    
 
 2.  **创建并激活虚拟环境** (推荐)：
 
-    ```bash
+
     # Using Conda
     conda create -n index-tts-api python=3.10
     conda activate index-tts-api
@@ -53,13 +52,13 @@ index-tts to OpenAI API server
     # python -m venv venv
     # source venv/bin/activate  # Linux/macOS
     # venv\Scripts\activate    # Windows
-    ```
+
 
 3.  **安装依赖**：
 
-    ```bash
+
     pip install -r requirements.txt
-    ```
+
 
 4.  **模型准备**：
 
@@ -83,19 +82,19 @@ index-tts to OpenAI API server
 
     * 将你的 参考声音文件 `audio.wav` 文件放入 `voices` 文件夹中。API 服务会从此路径加载参考音频。
 
-        ```
+
         [Project Root]/
         ├── TTS_API.py
         ├── voices/
         │   └── audio.wav  <--- Ensure this file exists
         └── ...other files...
-        ```
+
 
 7.  **启动 API 服务**：
 
-    ```bash
+
     python TTS_API.py
-    ```
+
 
     服务默认启动在 `http://0.0.0.0:5000`。你可以在 `tts_api.py.py` 文件底部的 `app.run()` 中修改主机和端口。
 
@@ -121,34 +120,34 @@ index-tts to OpenAI API server
 
 * **Body (JSON)**:
 
-        ```json
+
       "model": "tts-1", // 或 "tts-1-hd'
       "input": "你好，世界！这是 IndexTTS 提供的快速推理语音合成服务。",
       "voice": "alloy", // alloy, echo, fable, onyx, nova, shimmer (均使用 audio.wav 音色)
       "response_format": "wav" // API目前主要输出WAV格式，其他格式请求仅作记录
-      ```
+
   
 
 ### 请求示例 (`curl`)
 
 
 
-```bash
 
-curl -X POST http://localhost:5000/v1/audio/speech \
 
--H "Authorization: Bearer sk-test-api-key-1234567890" \ # 替换为你的 API Key
+    curl -X POST http://localhost:5000/v1/audio/speech \
 
--H "Content-Type: application/json" \
+    -H "Authorization: Bearer sk-test-api-key-1234567890" \ # 替换为你的 API Key
 
--d '{
+    -H "Content-Type: application/json" \
 
-    "model": "tts-1",
-
-    "input": "通过API接入到Open WebUI非常方便。",
-
-    "voice": "nova"
-
-}' \
+    -d '{
+    
+    "model": "tts-1",
+    
+    "input": "通过API接入到Open WebUI非常方便。",
+    
+    "voice": "nova"
+    
+    }' \
 
 --output speech_output.wav # 音频将流式保存到此文件
